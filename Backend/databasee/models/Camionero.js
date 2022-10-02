@@ -4,19 +4,20 @@ const sequelize = require('../sequelize')
 class Camionero extends Model {}
 
 Camionero.init({
-    dni: {
+    id: {
         type: DataTypes.STRING,
         allowNull: false,
         unique: true
     },
     nombre: DataTypes.STRING,
-    apellido: DataTypes.STRING,
     direccion: DataTypes.STRING,
-    fechaNacimiento: DataTypes.DATE
+    telefono: DataTypes.STRING,
+    salario: DataTypes.DATE,
+    region: DataTypes.DATE,
 }, {
     sequelize,
     modelName: 'Camionero',
-    tableName: 'Camioneros'
+    tableName: 'Camioneros',
 })
 
 module.exports = Camionero

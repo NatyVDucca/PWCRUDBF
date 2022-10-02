@@ -5,7 +5,7 @@ const app = express()
 
 const sequelize = require('./databasee/sequelize')
 const router = require('./routes')
-require('./databasee/associations')
+require('./databasee/associations.js')
 
 const port = 3000
 app.use(express.json())

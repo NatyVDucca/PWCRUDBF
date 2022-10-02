@@ -3,7 +3,7 @@ const path = require('path');
 
 // Listar Camioneros --> /camionero
 router.get('/', (req, res) => {
-    res.sendFile(path.resolve('./views/Camioneros/listarCamioneros.html'));
+    res.sendFile(path.resolve('./views/Camioneros/listarCamionero.html'));
 })
 
 // Crear Camionero --> /camionero/create
