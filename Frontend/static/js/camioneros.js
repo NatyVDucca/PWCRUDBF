@@ -15,7 +15,7 @@ function getIdFromUrl() {
 
 // CRUD
 
-function getcamionero() {
+function getCamionero() {
     const id = getIdFromUrl()
     const url = `http://localhost:3000/camioneros/${id}`
 
@@ -33,7 +33,7 @@ function getcamionero() {
 
 }
 
-function listarcamioneros() {
+function listarCamioneros() {
     let url = 'http://localhost:3000/camioneros';
     fetch(url, {})
         .then(response => response.json())
@@ -65,7 +65,7 @@ function listarcamioneros() {
         });
 }
 
-function crearcamionero() {
+function crearCamionero() {
     // Deshabilitar botón
     disableButton(id = "guardar")
 
@@ -97,7 +97,7 @@ function crearcamionero() {
     })
 }
 
-function editarcamionero() {
+function editarCamionero() {
     // Deshabilitar botón
     disableButton(id = "guardar")
 
@@ -131,12 +131,12 @@ function editarcamionero() {
     })
 }
 
-function eliminarcamionero(id) {
+function eliminarCamionero(id) {
     const item = document.getElementById(id)
     const nombre = item.querySelector('.nombre').innerText
     const telefono = item.querySelector('.telefono').innerText
 
-    if (confirm(`¿Desea eliminar el camionero "${nombre} ${apellido}"?`)) {
+    if (confirm(`¿Desea eliminar el Camionero "${nombre} ${apellido}"?`)) {
         const url = `http://localhost:3000/camioneros/delete/${id}`
 
         fetch(url, {

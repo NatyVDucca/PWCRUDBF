@@ -34,7 +34,8 @@ router.put('/update/:id', (req, res) => {
         region: req.body.region     
         
         
-    }, {        where: {
+    }, {        
+        where: {
             id: req.params.id
         }
     }).then(data => {
